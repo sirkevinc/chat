@@ -1,0 +1,28 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sirkevinc/chat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sirkevinc/chat/issues"
+  },
+  "homepage": "https://github.com/sirkevinc/chat#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "socket.io": "^4.5.1",
+    "tmi.js": "^1.8.5"
+  }
+}
