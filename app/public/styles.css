@@ -5,29 +5,36 @@ body {
 }
 
 .app__container {
-
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.messages__container {
-    border: 1px black solid;
-    min-height: 500px;
-    max-height: 500px;
-    position: fixed;
-    /* position: fixed;
-    right: 0;
-    bottom: 45%;
-    display: block;
-    width: 300px;
-    height: 150px;
-    overflow: hidden; */
+#messages__container {
+    background: none;
+    color: #000;
+    border: 1px solid grey;
+    border-radius:20px;
+    min-height: 480px;
+    min-width: 425px;
+    max-height: 100%;
+    padding: 0.25em 0.5em;
+}
+
+li {
+    list-style: none;
+}
+
+#messages__container li:nth-child(even) {
+    background-color: #F5F5F5;
 }
 .message {
-    border: black solid 1px;
+    padding: 0.5em;
     font-size: 1.1em;
     width: 425px;
-    min-height: 45px;
+    height: 48px;
     height: auto;
-    display: block;
-    transition-timing-function: ease-in-out;
-    transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+    transition: opacity .5s linear;
 }

@@ -1,6 +1,4 @@
 var socket = io();
-let channelName;
-let displayedMessages = [];
 
 socket.on('chat message', (response) => {
     console.log(response)
@@ -10,14 +8,17 @@ socket.on('chat message', (response) => {
 })
 
 const addMessageElement = (user, message) => {
-    const newDiv = document.createElement("div");
+    const newListItem = document.createElement("li");
+    // const newMessage = document.createElement("text");
+    // const userName = document.createElement("text");
+    // userName.appendChild
     const newContent = document.createTextNode(`${user}: ${message}`);
-    newDiv.appendChild(newContent);
-    newDiv.classList.add("message")
-    const currentDiv = document.getElementById("messages__container");
-    currentDiv.appendChild(newDiv)
+    newListItem.appendChild(newContent);
+    newListItem.classList.add("message")
+    const container = document.getElementById("messages__container");
+    container.appendChild(newListItem)
     let messages = document.getElementsByClassName("message");
-    if (messages.length > 10) {
-        currentDiv.removeChild(messages[0]);
+    if (messages.length >= 10) {
+        container.removeChild(messages[0]);
     }
 }
